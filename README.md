@@ -154,3 +154,8 @@ npm run dev
    - `PORT`: `5000`
    - `JWT_SECRET`: `christ_university_cai_portal_jwt_secret_key_2026`
 5. Click **Deploy**. Vercel will host both your frontend SPA and serverless API under the same domain.
+
+---
+
+*Centre for Artificial Intelligence — Requests Office Portal (FINAL VERSION)*
+
