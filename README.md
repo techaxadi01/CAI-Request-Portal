@@ -8,6 +8,9 @@
 [![Security](https://img.shields.io/badge/Security-bcrypt%20Encrypted-success?style=flat&logo=shield)](https://github.com/dcodeIO/bcrypt.js)
 [![Institution](https://img.shields.io/badge/Christ%20University-Bengaluru-1b3b57?style=flat)](https://christuniversity.in)
 [![Release](https://img.shields.io/badge/Release-FINAL%20VERSION-blueviolet?style=flat)](https://github.com/techaxadi01/CAI-Request-Portal)
+[![Documentation](https://img.shields.io/badge/Documentation-Project%20Explanation-blue?style=flat&logo=markdown)](./PROJECT_EXPLANATION.md)
+
+> 📘 **Detailed Architecture Guide**: For an in-depth breakdown of schemas, workflow states, security models, and compliance matrices, see [PROJECT_EXPLANATION.md](./PROJECT_EXPLANATION.md) (also available in [Word .docx](./docs/PROJECT_EXPLANATION.docx) and [Plain Text](./docs/PROJECT_EXPLANATION.txt)).
 
 ---
 
