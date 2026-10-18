@@ -151,7 +151,7 @@ export default function HomePage({ setCurrentView }) {
         </div>
       </section>
 
-      {/* The 3 Roles Workflow Visualizer */}
+      {/* The 3 Roles Workflow Visualizer (Pure Role Descriptions) */}
       <section className="max-w-5xl mx-auto px-4 sm:px-6">
         <div className="text-center space-y-2 mb-8">
           <span className="text-xs uppercase tracking-wider font-bold text-blue-600 dark:text-sky-400">
@@ -161,12 +161,12 @@ export default function HomePage({ setCurrentView }) {
             How Requests Travel Through the System
           </h3>
           <p className="text-sm text-slate-600 dark:text-slate-400 max-w-2xl mx-auto">
-            Each role accesses dedicated interfaces with strict boundary controls.
+            Each role accesses dedicated interfaces with strict boundary controls and audit tracking.
           </p>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-          {/* Role 1: Requester */}
+          {/* Role 1: Requesters */}
           <div className="bg-white dark:bg-slate-900 rounded-2xl p-6 border border-slate-200 dark:border-slate-800 hover:border-blue-300 hover:shadow-lg transition-all flex flex-col justify-between space-y-4">
             <div className="space-y-3">
               <div className="w-10 h-10 rounded-xl bg-blue-50 text-blue-700 dark:bg-slate-800 dark:text-blue-300 flex items-center justify-center font-bold">
@@ -178,30 +178,20 @@ export default function HomePage({ setCurrentView }) {
               <p className="text-xs text-slate-600 dark:text-slate-400 leading-relaxed">
                 Submit requests with details and documents &lt; 10 MB. Track live progress across all stages, upload requested corrections, and formally confirm decisions before closure.
               </p>
-              <div className="text-xs text-slate-500 space-y-1 pt-2 border-t border-slate-100 dark:border-slate-800">
-                <div>• Demo 1: <span className="font-medium text-slate-800 dark:text-slate-200">Dr. Anita Sharma</span> (Faculty - Central Campus)</div>
-                <div>• Demo 2: <span className="font-medium text-slate-800 dark:text-slate-200">Priya Sundaram</span> (Student - BGR Campus)</div>
-              </div>
             </div>
-            <div className="space-y-2">
-              <button
-                onClick={() => {
-                  switchDemoUser('anita.sharma@christuniversity.in');
-                  setCurrentView('dashboard');
-                }}
-                className="w-full py-2.5 px-3 rounded-xl bg-blue-50 hover:bg-blue-600 hover:text-white text-blue-800 dark:bg-slate-800 dark:hover:bg-blue-600 dark:text-blue-300 text-xs font-bold border border-blue-200 dark:border-slate-700 transition-all hover:scale-[1.02]"
-              >
-                Log in as Requester 1 (Faculty)
-              </button>
-              <button
-                onClick={() => {
-                  switchDemoUser('priya.s@mca.christuniversity.in');
-                  setCurrentView('dashboard');
-                }}
-                className="w-full py-2.5 px-3 rounded-xl bg-blue-50 hover:bg-blue-600 hover:text-white text-blue-800 dark:bg-slate-800 dark:hover:bg-blue-600 dark:text-blue-300 text-xs font-bold border border-blue-200 dark:border-slate-700 transition-all hover:scale-[1.02]"
-              >
-                Log in as Requester 2 (Student)
-              </button>
+            <div className="text-xs text-slate-500 space-y-1.5 pt-3 border-t border-slate-100 dark:border-slate-800">
+              <div className="flex items-center gap-1.5">
+                <CheckCircle2 className="w-3.5 h-3.5 text-blue-500 shrink-0" />
+                <span><strong>Faculty:</strong> Institutional research & lab grants</span>
+              </div>
+              <div className="flex items-center gap-1.5">
+                <CheckCircle2 className="w-3.5 h-3.5 text-sky-500 shrink-0" />
+                <span><strong>Students:</strong> Innovation & IEEE travel funding</span>
+              </div>
+              <div className="flex items-center gap-1.5">
+                <Clock className="w-3.5 h-3.5 text-slate-400 shrink-0" />
+                <span>Mandatory closure confirmation required</span>
+              </div>
             </div>
           </div>
 
@@ -220,20 +210,21 @@ export default function HomePage({ setCurrentView }) {
               <p className="text-xs text-slate-600 dark:text-slate-400 leading-relaxed">
                 The central office anchor who verifies documents within 2 working days, filters requests by campus (preventing mix-ups), requests fixes from requesters, routes files to the specialist, and sanctions outcomes.
               </p>
-              <div className="text-xs text-slate-500 space-y-1 pt-2 border-t border-slate-100 dark:border-slate-800">
-                <div>• Email: <span className="font-mono text-slate-700 dark:text-slate-300">coordinator@christuniversity.in</span></div>
-                <div>• Solves the chaos of disjointed Excel and WhatsApp</div>
+            </div>
+            <div className="text-xs text-slate-500 space-y-1.5 pt-3 border-t border-slate-100 dark:border-slate-800">
+              <div className="flex items-center gap-1.5">
+                <Clock className="w-3.5 h-3.5 text-sky-500 shrink-0" />
+                <span><strong>Intake SLA:</strong> 2 working days turnaround</span>
+              </div>
+              <div className="flex items-center gap-1.5">
+                <Building className="w-3.5 h-3.5 text-blue-500 shrink-0" />
+                <span>Campus-wise tabs eliminate Excel chaos</span>
+              </div>
+              <div className="flex items-center gap-1.5">
+                <ShieldCheck className="w-3.5 h-3.5 text-emerald-500 shrink-0" />
+                <span>Mediates all specialist communication</span>
               </div>
             </div>
-            <button
-              onClick={() => {
-                switchDemoUser('coordinator@christuniversity.in');
-                setCurrentView('dashboard');
-              }}
-              className="w-full py-2.5 px-3 rounded-xl bg-gradient-to-r from-blue-600 to-sky-600 hover:from-blue-700 hover:to-sky-700 text-white text-xs font-bold shadow-md transition-all hover:scale-[1.02]"
-            >
-              Log in as Coordinator Demo
-            </button>
           </div>
 
           {/* Role 3: Specialist */}
@@ -248,20 +239,166 @@ export default function HomePage({ setCurrentView }) {
               <p className="text-xs text-slate-600 dark:text-slate-400 leading-relaxed">
                 External technical consultant. Designed with extreme WhatsApp-clean simplicity: large high-contrast cards, zero jargon, privacy-masked applicant details, and clear recommendation options.
               </p>
-              <div className="text-xs text-slate-500 space-y-1 pt-2 border-t border-slate-100 dark:border-slate-800">
-                <div>• Turnaround: <span className="font-medium text-slate-800 dark:text-slate-200">Up to 7 working days</span></div>
-                <div>• Direct applicant contact: <span className="text-rose-500 font-bold">Never directly</span></div>
+            </div>
+            <div className="text-xs text-slate-500 space-y-1.5 pt-3 border-t border-slate-100 dark:border-slate-800">
+              <div className="flex items-center gap-1.5">
+                <Clock className="w-3.5 h-3.5 text-indigo-500 shrink-0" />
+                <span><strong>Review SLA:</strong> Up to 7 working days</span>
+              </div>
+              <div className="flex items-center gap-1.5">
+                <ShieldCheck className="w-3.5 h-3.5 text-rose-500 shrink-0" />
+                <span><strong>Direct contact:</strong> Strictly prohibited</span>
+              </div>
+              <div className="flex items-center gap-1.5">
+                <CheckCircle2 className="w-3.5 h-3.5 text-blue-500 shrink-0" />
+                <span>1-click recommendations: Recommend / Revise / Decline</span>
               </div>
             </div>
-            <button
-              onClick={() => {
-                switchDemoUser('specialist@christuniversity.in');
-                setCurrentView('dashboard');
-              }}
-              className="w-full py-2.5 px-3 rounded-xl bg-blue-50 hover:bg-blue-600 hover:text-white text-blue-800 dark:bg-slate-800 dark:hover:bg-blue-600 dark:text-blue-300 text-xs font-bold border border-blue-200 dark:border-slate-700 transition-all hover:scale-[1.02]"
-            >
-              Log in as Specialist Demo
-            </button>
+          </div>
+        </div>
+      </section>
+
+      {/* Dedicated 1-Click Interactive Demo Sandbox Section */}
+      <section className="max-w-5xl mx-auto px-4 sm:px-6">
+        <div className="bg-gradient-to-br from-blue-50 via-white to-sky-50 dark:from-slate-900 dark:via-slate-900/90 dark:to-slate-950 rounded-3xl p-6 sm:p-8 border border-blue-200/80 dark:border-slate-800 shadow-lg space-y-6">
+          <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 border-b border-blue-100 dark:border-slate-800 pb-4">
+            <div>
+              <span className="text-xs uppercase tracking-wider font-bold text-blue-600 dark:text-sky-400">
+                Fast Evaluator Sandbox
+              </span>
+              <h3 className="text-xl font-bold text-slate-900 dark:text-white mt-0.5">
+                Instant Demo Account Logins
+              </h3>
+              <p className="text-xs text-slate-600 dark:text-slate-400 mt-1">
+                Select any pre-configured persona below to launch their authenticated dashboard in 1 click.
+              </p>
+            </div>
+            <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-white dark:bg-slate-800 border border-blue-200 dark:border-slate-700 text-xs font-semibold text-slate-700 dark:text-slate-300 shrink-0 self-start sm:self-auto shadow-xs">
+              <Sparkles className="w-3.5 h-3.5 text-amber-500" />
+              <span>Default Password: <code className="font-mono text-blue-600 dark:text-sky-400 font-bold">password123</code></span>
+            </div>
+          </div>
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+            {/* Demo 1: Faculty Requester */}
+            <div className="bg-white dark:bg-slate-800/90 rounded-2xl p-4 border border-slate-200 dark:border-slate-700 hover:border-blue-300 dark:hover:border-blue-600 hover:shadow-md transition-all flex flex-col justify-between space-y-3">
+              <div className="space-y-1.5">
+                <div className="flex items-center justify-between">
+                  <span className="text-[10px] font-extrabold px-2 py-0.5 rounded-full bg-blue-100 text-blue-800 dark:bg-blue-900/50 dark:text-blue-300">
+                    Faculty
+                  </span>
+                  <span className="text-[10px] text-slate-400">Central Campus</span>
+                </div>
+                <h5 className="text-sm font-bold text-slate-900 dark:text-white leading-tight">
+                  Dr. Anita Sharma
+                </h5>
+                <p className="text-[11px] text-slate-500 dark:text-slate-400 truncate" title="anita.sharma@christuniversity.in">
+                  anita.sharma@christuniversity.in
+                </p>
+                <p className="text-[11px] text-slate-600 dark:text-slate-300 leading-snug">
+                  AI GPU workstation proposal under technical review.
+                </p>
+              </div>
+              <button
+                onClick={() => {
+                  switchDemoUser('anita.sharma@christuniversity.in');
+                  setCurrentView('dashboard');
+                }}
+                className="w-full py-2 px-3 rounded-xl bg-blue-50 hover:bg-blue-600 hover:text-white text-blue-800 dark:bg-slate-700 dark:hover:bg-blue-600 dark:text-blue-200 text-xs font-bold border border-blue-200 dark:border-slate-600 transition-all hover:scale-[1.02] shadow-xs"
+              >
+                Log in as Requester 1 (Faculty)
+              </button>
+            </div>
+
+            {/* Demo 2: Student Requester */}
+            <div className="bg-white dark:bg-slate-800/90 rounded-2xl p-4 border border-slate-200 dark:border-slate-700 hover:border-sky-300 dark:hover:border-sky-600 hover:shadow-md transition-all flex flex-col justify-between space-y-3">
+              <div className="space-y-1.5">
+                <div className="flex items-center justify-between">
+                  <span className="text-[10px] font-extrabold px-2 py-0.5 rounded-full bg-sky-100 text-sky-800 dark:bg-sky-900/50 dark:text-sky-300">
+                    Student
+                  </span>
+                  <span className="text-[10px] text-slate-400">BGR Campus</span>
+                </div>
+                <h5 className="text-sm font-bold text-slate-900 dark:text-white leading-tight">
+                  Priya Sundaram
+                </h5>
+                <p className="text-[11px] text-slate-500 dark:text-slate-400 truncate" title="priya.s@mca.christuniversity.in">
+                  priya.s@mca.christuniversity.in
+                </p>
+                <p className="text-[11px] text-slate-600 dark:text-slate-300 leading-snug">
+                  IEEE conference travel grant with requested corrections.
+                </p>
+              </div>
+              <button
+                onClick={() => {
+                  switchDemoUser('priya.s@mca.christuniversity.in');
+                  setCurrentView('dashboard');
+                }}
+                className="w-full py-2 px-3 rounded-xl bg-sky-50 hover:bg-sky-600 hover:text-white text-sky-800 dark:bg-slate-700 dark:hover:bg-sky-600 dark:text-sky-200 text-xs font-bold border border-sky-200 dark:border-slate-600 transition-all hover:scale-[1.02] shadow-xs"
+              >
+                Log in as Requester 2 (Student)
+              </button>
+            </div>
+
+            {/* Demo 3: Coordinator */}
+            <div className="bg-white dark:bg-slate-800/90 rounded-2xl p-4 border-2 border-blue-400/50 dark:border-blue-500/50 hover:shadow-md transition-all flex flex-col justify-between space-y-3 relative">
+              <div className="space-y-1.5">
+                <div className="flex items-center justify-between">
+                  <span className="text-[10px] font-extrabold px-2 py-0.5 rounded-full bg-blue-600 text-white shadow-xs">
+                    Coordinator
+                  </span>
+                  <span className="text-[10px] text-slate-400">Central Office</span>
+                </div>
+                <h5 className="text-sm font-bold text-slate-900 dark:text-white leading-tight">
+                  Prof. Rajesh Nair
+                </h5>
+                <p className="text-[11px] text-slate-500 dark:text-slate-400 truncate" title="coordinator@christuniversity.in">
+                  coordinator@christuniversity.in
+                </p>
+                <p className="text-[11px] text-slate-600 dark:text-slate-300 leading-snug">
+                  Full intake pipeline, campus filtering & sanctioning desk.
+                </p>
+              </div>
+              <button
+                onClick={() => {
+                  switchDemoUser('coordinator@christuniversity.in');
+                  setCurrentView('dashboard');
+                }}
+                className="w-full py-2 px-3 rounded-xl bg-gradient-to-r from-blue-600 to-sky-600 hover:from-blue-700 hover:to-sky-700 text-white text-xs font-bold shadow-md transition-all hover:scale-[1.02]"
+              >
+                Log in as Coordinator Demo
+              </button>
+            </div>
+
+            {/* Demo 4: Specialist */}
+            <div className="bg-white dark:bg-slate-800/90 rounded-2xl p-4 border border-slate-200 dark:border-slate-700 hover:border-indigo-300 dark:hover:border-indigo-600 hover:shadow-md transition-all flex flex-col justify-between space-y-3">
+              <div className="space-y-1.5">
+                <div className="flex items-center justify-between">
+                  <span className="text-[10px] font-extrabold px-2 py-0.5 rounded-full bg-indigo-100 text-indigo-800 dark:bg-indigo-900/50 dark:text-indigo-300">
+                    Specialist
+                  </span>
+                  <span className="text-[10px] text-slate-400">Advisory Panel</span>
+                </div>
+                <h5 className="text-sm font-bold text-slate-900 dark:text-white leading-tight">
+                  Dr. K. S. Ramanathan
+                </h5>
+                <p className="text-[11px] text-slate-500 dark:text-slate-400 truncate" title="specialist@christuniversity.in">
+                  specialist@christuniversity.in
+                </p>
+                <p className="text-[11px] text-slate-600 dark:text-slate-300 leading-snug">
+                  WhatsApp-clean technical assessment & recommendations.
+                </p>
+              </div>
+              <button
+                onClick={() => {
+                  switchDemoUser('specialist@christuniversity.in');
+                  setCurrentView('dashboard');
+                }}
+                className="w-full py-2 px-3 rounded-xl bg-blue-50 hover:bg-blue-600 hover:text-white text-blue-800 dark:bg-slate-700 dark:hover:bg-blue-600 dark:text-blue-200 text-xs font-bold border border-blue-200 dark:border-slate-600 transition-all hover:scale-[1.02] shadow-xs"
+              >
+                Log in as Specialist Demo
+              </button>
+            </div>
           </div>
         </div>
       </section>

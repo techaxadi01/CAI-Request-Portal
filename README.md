@@ -13,7 +13,7 @@
 
 ## 🔑 Demo Evaluator Login Credentials
 
-For fast review and evaluation, 1-click demo login buttons are provided directly on the **Home Page** (under **Three-Role Separation**). All demo accounts share the password: `password123`.
+For fast review and evaluation, 1-click demo login buttons are provided directly on the **Home Page** in the dedicated **Fast Evaluator Sandbox** section. All demo accounts share the password: `password123`.
 
 | Role | Name | Institutional Email | 1-Click Home Button | Password | Campus | Purpose / Assigned Workflow State |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
