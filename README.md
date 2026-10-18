@@ -7,19 +7,20 @@
 [![Backend](https://img.shields.io/badge/Backend-Express%20%2B%20Node.js-lightgrey?style=flat&logo=node.js)](https://nodejs.org)
 [![Security](https://img.shields.io/badge/Security-bcrypt%20Encrypted-success?style=flat&logo=shield)](https://github.com/dcodeIO/bcrypt.js)
 [![Institution](https://img.shields.io/badge/Christ%20University-Bengaluru-1b3b57?style=flat)](https://christuniversity.in)
+[![Release](https://img.shields.io/badge/Release-FINAL%20VERSION-blueviolet?style=flat)](https://github.com/techaxadi01/CAI-Request-Portal)
 
 ---
 
 ## 🔑 Demo Evaluator Login Credentials
 
-For fast review and evaluation, use these pre-configured accounts on the **Sign In** page. All demo accounts share the password: `password123`.
+For fast review and evaluation, 1-click demo login buttons are provided directly on the **Home Page** (under **Three-Role Separation**), as well as on the **Sign In** page. All demo accounts share the password: `password123`.
 
-| Role | Name | Institutional Email | Password | Campus | Purpose / Assigned Workflow State |
-| :--- | :--- | :--- | :--- | :--- | :--- |
-| **Coordinator** | Prof. Rajesh Nair | `coordinator@christuniversity.in` | `password123` | Central Office | Full intake pipeline, campus filter tabs, specialist routing & decision sanctioning |
-| **Specialist** | Dr. K. S. Ramanathan | `specialist@christuniversity.in` | `password123` | Advisory Panel | WhatsApp-clean review desk (~50 yrs old), technical assessments & feedback |
-| **Requester 1 (Faculty)** | Dr. Anita Sharma | `anita.sharma@christuniversity.in` | `password123` | Central Campus | AI deep learning GPU workstation request (under specialist review) |
-| **Requester 2 (Student)** | Priya Sundaram | `priya.s@mca.christuniversity.in` | `password123` | BGR Campus | IEEE conference travel grant (corrections requested) |
+| Role | Name | Institutional Email | 1-Click Home Button | Password | Campus | Purpose / Assigned Workflow State |
+| :--- | :--- | :--- | :--- | :--- | :--- | :--- |
+| **Requester 1 (Faculty)** | Dr. Anita Sharma | `anita.sharma@christuniversity.in` | `Log in as Requester 1 (Faculty)` | `password123` | Central Campus | AI deep learning GPU workstation request (under specialist review) |
+| **Requester 2 (Student)** | Priya Sundaram | `priya.s@mca.christuniversity.in` | `Log in as Requester 2 (Student)` | `password123` | BGR Campus | IEEE conference travel grant (corrections requested) |
+| **Coordinator** | Prof. Rajesh Nair | `coordinator@christuniversity.in` | `Log in as Coordinator Demo` | `password123` | Central Office | Full intake pipeline, campus filter tabs, specialist routing & decision sanctioning |
+| **Specialist** | Dr. K. S. Ramanathan | `specialist@christuniversity.in` | `Log in as Specialist Demo` | `password123` | Advisory Panel | WhatsApp-clean review desk (~50 yrs old), technical assessments & feedback |
 
 ---
 
@@ -89,7 +90,7 @@ The database is pre-seeded with at least one realistic task in **every single wo
 ## 🚀 Key Features & Workflow Implementation
 
 ### 1. Unified 3-Role Workflow & Data Isolation
-- **Requesters (Faculty & Students)**: Submit applications with details, upload attachments (<10 MB readable files), monitor real-time progress, respond to coordinator corrections, and formally confirm decisions before request closure.
+- **Requesters (Faculty & Students)**: Submit applications with details, upload attachments (<10 MB readable files), monitor real-time progress, respond to coordinator corrections, and formally confirm decisions before request closure. Includes dedicated 1-click home page demo buttons for both Faculty (`Dr. Anita Sharma`) and Student (`Priya Sundaram`) personas.
 - **Coordinator (Prof. Rajesh Nair)**: Central office intake check within 2 working days, campus-wise filtering tabs (preventing cross-campus spreadsheet mix-ups), request deficiency correction routing, specialist dispatch, and final sanctioning.
 - **Specialist (Dr. K. S. Ramanathan, ~50 yrs old)**: Designed with extreme WhatsApp-clean simplicity, large accessible cards, and privacy protection (never communicates with applicant directly; all reviews are mediated by the Coordinator).
 
