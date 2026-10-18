@@ -13,14 +13,14 @@
 
 ## 🔑 Demo Evaluator Login Credentials
 
-For fast review and evaluation, 1-click demo login buttons are provided directly on the **Home Page** (under **Three-Role Separation**), as well as on the **Sign In** page. All demo accounts share the password: `password123`.
+For fast review and evaluation, 1-click demo login buttons are provided directly on the **Home Page** (under **Three-Role Separation**). All demo accounts share the password: `password123`.
 
 | Role | Name | Institutional Email | 1-Click Home Button | Password | Campus | Purpose / Assigned Workflow State |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | **Requester 1 (Faculty)** | Dr. Anita Sharma | `anita.sharma@christuniversity.in` | `Log in as Requester 1 (Faculty)` | `password123` | Central Campus | AI deep learning GPU workstation request (under specialist review) |
 | **Requester 2 (Student)** | Priya Sundaram | `priya.s@mca.christuniversity.in` | `Log in as Requester 2 (Student)` | `password123` | BGR Campus | IEEE conference travel grant (corrections requested) |
 | **Coordinator** | Prof. Rajesh Nair | `coordinator@christuniversity.in` | `Log in as Coordinator Demo` | `password123` | Central Office | Full intake pipeline, campus filter tabs, specialist routing & decision sanctioning |
-| **Specialist** | Dr. K. S. Ramanathan | `specialist@christuniversity.in` | `Log in as Specialist Demo` | `password123` | Advisory Panel | WhatsApp-clean review desk (~50 yrs old), technical assessments & feedback |
+| **Specialist** | Dr. K. S. Ramanathan | `specialist@christuniversity.in` | `Log in as Specialist Demo` | `password123` | Advisory Panel | WhatsApp-clean review desk, technical assessments & feedback |
 
 ---
 
@@ -33,7 +33,7 @@ Prior to this application, the office operated on a disjointed combination of ca
 - **Ambiguous Status**: Requesters had no visibility on where their requests stood.
 - **Wrong Campus Filing**: Requests were routinely filed under the incorrect campus.
 - **Coordinator Burden**: Staff spent critical time acting as manual file and message couriers.
-- **Specialist Usability**: The external specialist (~50 years old, accustomed to WhatsApp) received mixed replies in single chat threads.
+- **Specialist Usability**: The external specialist (accustomed to WhatsApp-clean simplicity) received mixed replies in single chat threads.
 
 ### The Solution
 This portal replaces the chaos with an enterprise-grade web application featuring strict role boundaries, institutional email validation, automated 2-day and 7-day SLA tracking, and audit-logged lifecycles.
@@ -92,7 +92,7 @@ The database is pre-seeded with at least one realistic task in **every single wo
 ### 1. Unified 3-Role Workflow & Data Isolation
 - **Requesters (Faculty & Students)**: Submit applications with details, upload attachments (<10 MB readable files), monitor real-time progress, respond to coordinator corrections, and formally confirm decisions before request closure. Includes dedicated 1-click home page demo buttons for both Faculty (`Dr. Anita Sharma`) and Student (`Priya Sundaram`) personas.
 - **Coordinator (Prof. Rajesh Nair)**: Central office intake check within 2 working days, campus-wise filtering tabs (preventing cross-campus spreadsheet mix-ups), request deficiency correction routing, specialist dispatch, and final sanctioning.
-- **Specialist (Dr. K. S. Ramanathan, ~50 yrs old)**: Designed with extreme WhatsApp-clean simplicity, large accessible cards, and privacy protection (never communicates with applicant directly; all reviews are mediated by the Coordinator).
+- **Specialist (Dr. K. S. Ramanathan)**: Designed with extreme WhatsApp-clean simplicity, large accessible cards, and privacy protection (never communicates with applicant directly; all reviews are mediated by the Coordinator).
 
 ### 2. Christ University Institutional Email Enforcement
 - **Faculty Format**: `user@christuniversity.in` (Verified with light blue faculty badge)

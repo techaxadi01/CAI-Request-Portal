@@ -77,7 +77,7 @@ export default function SpecialistDashboard({ setCurrentView, setSelectedRequest
 
   return (
     <div className="max-w-7xl mx-auto px-4 py-8 space-y-6">
-      {/* Specialist Header (WhatsApp-clean, high clarity, age ~50 tailored) */}
+      {/* Specialist Header (WhatsApp-clean, high clarity) */}
       <div className="bg-gradient-to-r from-christ-900 via-christ-800 to-slate-900 text-white rounded-2xl p-6 shadow-md border border-christ-700 flex flex-col md:flex-row md:items-center md:justify-between gap-4">
         <div className="space-y-1">
           <div className="inline-flex items-center gap-2 px-2.5 py-0.5 rounded-full bg-christ-800 text-sky-200 text-xs font-semibold">

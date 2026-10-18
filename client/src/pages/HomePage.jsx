@@ -246,7 +246,7 @@ export default function HomePage({ setCurrentView }) {
                 Specialist (Dr. K. S. Ramanathan)
               </h4>
               <p className="text-xs text-slate-600 dark:text-slate-400 leading-relaxed">
-                External technical consultant (~50 yrs old). Designed with extreme WhatsApp-clean simplicity: large high-contrast cards, zero jargon, privacy-masked applicant details, and clear recommendation options.
+                External technical consultant. Designed with extreme WhatsApp-clean simplicity: large high-contrast cards, zero jargon, privacy-masked applicant details, and clear recommendation options.
               </p>
               <div className="text-xs text-slate-500 space-y-1 pt-2 border-t border-slate-100 dark:border-slate-800">
                 <div>• Turnaround: <span className="font-medium text-slate-800 dark:text-slate-200">Up to 7 working days</span></div>
