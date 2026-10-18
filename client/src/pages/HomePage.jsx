@@ -366,7 +366,7 @@ export default function HomePage({ setCurrentView }) {
                 }}
                 className="w-full py-2 px-3 rounded-xl bg-gradient-to-r from-blue-600 to-sky-600 hover:from-blue-700 hover:to-sky-700 text-white text-xs font-bold shadow-md transition-all hover:scale-[1.02]"
               >
-                Log in as Coordinator Demo
+                Log in as Coordinator
               </button>
             </div>
 
@@ -396,7 +396,7 @@ export default function HomePage({ setCurrentView }) {
                 }}
                 className="w-full py-2 px-3 rounded-xl bg-blue-50 hover:bg-blue-600 hover:text-white text-blue-800 dark:bg-slate-700 dark:hover:bg-blue-600 dark:text-blue-200 text-xs font-bold border border-blue-200 dark:border-slate-600 transition-all hover:scale-[1.02] shadow-xs"
               >
-                Log in as Specialist Demo
+                Log in as Specialist
               </button>
             </div>
           </div>
