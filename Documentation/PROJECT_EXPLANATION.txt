@@ -1,0 +1,280 @@
+================================================================================
+CENTRE FOR ARTIFICIAL INTELLIGENCE - FULL STACK DEVELOPMENT INTERNSHIP
+REQUEST MANAGEMENT PORTAL - COMPLETE PROJECT EXPLANATION & ARCHITECTURE GUIDE
+================================================================================
+
+Institution: Christ University Central Campus
+Repository: techaxadi01/CAI-Request-Portal
+Database: MongoDB Atlas (Database: CAI_Request_Portal)
+Release Version: FINAL VERSION
+Deployment: Vercel Single-Host Monorepo (Express Serverless API + React 18 SPA)
+Status: 100% Complete & Document-Compliant
+
+--------------------------------------------------------------------------------
+TABLE OF CONTENTS
+--------------------------------------------------------------------------------
+1. EXECUTIVE OVERVIEW & PROBLEM STATEMENT
+2. FULL ASSIGNMENT SPECIFICATION COMPLIANCE MATRIX
+3. THREE-ROLE WORKFLOW & FAST EVALUATOR SANDBOX
+4. ALL 6 WORKFLOW STATES & DEMONSTRATION DATA DISTRIBUTION
+5. SYSTEM ARCHITECTURE & MONOREPO STRUCTURE
+6. MONGODB ATLAS DATABASE SCHEMAS & CONFIGURATION
+7. PASSWORDS & SECURITY: BCRYPT HASHING ARCHITECTURE
+8. INSTITUTIONAL EMAIL VALIDATION & DOMAIN ISOLATION
+9. USER INTERFACE & DUAL THEME (DARK / LIGHT) AESTHETICS
+10. DEMO EVALUATOR LOGIN CREDENTIALS & 1-CLICK ACCESS
+11. COMPLETE VERCEL CLOUD DEPLOYMENT GUIDE
+
+================================================================================
+1. EXECUTIVE OVERVIEW & PROBLEM STATEMENT
+================================================================================
+The Centre for Artificial Intelligence (CAI) Requests Office at Christ University 
+coordinates procurement and grant applications from faculty, research scholars, 
+and postgraduate students across campuses.
+
+Prior to this application, the office operated on a disjointed combination of:
+• Campus-wise Excel workbooks (prone to cross-campus entry errors and data collisions)
+• Informal email chains (attachments buried or misplaced)
+• Disorganized WhatsApp threads with external specialists (multiple request replies 
+  mixed into single chat feeds)
+
+Key Operational Deficits Solved by this Portal:
+• Files Lost / Overwritten: Every request maintains an immutable documents array 
+  with file types, timestamps, sizes, and version tracking (<10 MB readable files).
+• Ambiguous Status: Requesters can inspect real-time visual progress across all 6 
+  workflow states without needing to visit or call the office.
+• Wrong Campus Filing: Requests are strictly tagged to one of the 6 official 
+  Christ University campuses, and the Coordinator dashboard features instant campus-filter 
+  tabs to prevent cross-campus confusion.
+• Courier Burden on Coordinator: The coordinator no longer forwards messy emails; 
+  deficiencies are requested through structured modal forms with direct notifications.
+• Specialist Usability: The external specialist (accustomed to WhatsApp-clean simplicity) 
+  accesses a distraction-free review feed with high-contrast cards, zero technical 
+  jargon, and masked applicant identities.
+
+================================================================================
+2. FULL ASSIGNMENT SPECIFICATION COMPLIANCE MATRIX
+================================================================================
+Requirement in Assignment Document        | Implemented System Feature & Compliance Details
+------------------------------------------+-------------------------------------------------------------
+Three Separate Roles with Login           | Dedicated dashboards & boundaries for Requester, Coordinator, Specialist
+Request Travel Lifecycle                  | Full cycle: Requester -> Coordinator -> Specialist -> Coordinator -> Requester Confirmation -> Completed
+Data Boundary Isolation                   | Specialist evaluates technical files without seeing requester personal email/contacts
+Demo Accounts Required                    | Pre-configured accounts for Coordinator, Specialist, and 2 Requesters from different campuses
+Sample Requests                           | 6 complete realistic requests covering all 6 workflow states and all 6 Christ campuses
+Home Page Mandatory Text                  | Verbatim quote box + 6 structured key fact cards published on public visitor page
+Mandatory Document Attachments            | Signed Covering Letter, Description Brief, Quotations/Invoices (<10 MB readable files)
+Intake Turnaround (2 Days)                | Enforced on timeline and Coordinator queue within 2 working days turnaround window
+Expert Review (7 Days)                    | Tracked on Specialist desk with 7-day turnaround badges
+No Direct Expert Contact                  | Coordinator mediates all questions and corrections; requester never deals with expert directly
+Mandatory Closure Confirmation            | Decision Made state requires formal requester confirmation before request is marked Completed
+Helpline & Office Hours                   | Monday-Friday 9:30 AM - 4:30 PM & Helpline 080 0000 0000 displayed across footer and home page
+
+================================================================================
+3. THREE-ROLE WORKFLOW & FAST EVALUATOR SANDBOX
+================================================================================
+The application features a clean, architecturally separated Home Page with two 
+dedicated sections:
+
+A. THREE-ROLE SEPARATION SECTION (Pure Role Descriptions & SLA Boundaries):
+1. Requesters (Faculty & Students):
+   • Applies for equipment, compute, conference travel, and research grants.
+   • Uploads mandatory readable attachments (< 10 MB per file).
+   • Tracks live progress across all 6 workflow stages and submits requested corrections.
+   • Formally confirms decisions before final closure.
+2. Coordinator (Prof. Rajesh Nair - Central Hub):
+   • Central office anchor and gatekeeper.
+   • Performs initial intake checks within 2 working days turnaround SLA.
+   • Campus-wise tabs eliminate cross-campus spreadsheet mix-ups.
+   • Routes files to the specialist, requests applicant fixes, and sanctions outcomes.
+3. Specialist (Dr. K. S. Ramanathan - External Technical Advisory Panel):
+   • External technical consultant.
+   • Designed with extreme WhatsApp-clean simplicity: large high-contrast cards, 
+     zero cognitive clutter, and clear recommendation options (Recommended / 
+     Changes Recommended / Declined).
+   • Institutional Privacy Rule Active: Applicant email and direct phone are 
+     protected; all assessments return directly to the Coordinator within 7 working days.
+
+B. FAST EVALUATOR SANDBOX (Dedicated 1-Click Interactive Demo Access):
+A dedicated quick-access section providing instant 1-click login into all 4 demo personas:
+1. Requester 1 (Faculty): Dr. Anita Sharma (Central Campus) -> [Log in as Requester 1 (Faculty)]
+2. Requester 2 (Student): Priya Sundaram (BGR Campus) -> [Log in as Requester 2 (Student)]
+3. Coordinator: Prof. Rajesh Nair (Central Office) -> [Log in as Coordinator]
+4. Specialist: Dr. K. S. Ramanathan (Advisory Panel) -> [Log in as Specialist]
+
+================================================================================
+4. ALL 6 WORKFLOW STATES & DEMONSTRATION DATA DISTRIBUTION
+================================================================================
+Tracking ID  | Workflow State              | Campus                    | Category
+-------------+-----------------------------+---------------------------+------------------------
+CAI-2026-004 | Submitted                   | Yeshwanthpur Campus       | Hardware & Equipment
+CAI-2026-002 | Changes Requested           | Bannerghatta Road (BGR)   | Travel & Conference
+CAI-2026-001 | Under Specialist Review     | Central Campus            | Hardware & Equipment
+CAI-2026-006 | Specialist Feedback Received| Pune Lavasa Campus        | Hardware & Equipment
+CAI-2026-003 | Decision Made               | Kengeri Campus            | Software & Licenses
+CAI-2026-005 | Completed                   | Delhi NCR Campus          | Research Grant
+
+Every single state in the system lifecycle is represented by a demonstration task!
+
+Active Review Request Details:
+• CAI-2026-001 is currently active in "Under Specialist Review" status.
+• Specialist Dr. K. S. Ramanathan sees this task on his Review Desk with 3 PDF attachments 
+  and the Coordinator's instructions to verify hardware specs and electrical cooling.
+• The applicant email is masked for privacy.
+• Dr. Ramanathan submits his recommendation to the Coordinator without direct applicant contact.
+
+================================================================================
+5. SYSTEM ARCHITECTURE & MONOREPO STRUCTURE
+================================================================================
+Single-project full-stack monorepo ready for Vercel deployment:
+
+CAI Request Portal/
+├── .env                          <-- Local environment variables (git-ignored)
+├── .env.example                  <-- Public template with safe placeholders
+├── .gitignore                    <-- Excludes node_modules, .env, client/dist
+├── package.json                  <-- Monorepo build orchestrator
+├── vercel.json                   <-- Vercel serverless rewrite & framework: null
+├── api/
+│   └── index.js                  <-- Serverless entry point exporting Express app
+├── server/
+│   ├── .env                      <-- Backend local configuration
+│   ├── package.json              <-- Express, Mongoose, bcryptjs, cors, jsonwebtoken
+│   ├── server.js                 <-- Express application & routes registration
+│   ├── seedData.js               <-- Demo accounts & pre-seeded realistic requests
+│   ├── config/
+│   │   └── db.js                 <-- MongoDB Atlas connection with SRV DNS fallback
+│   ├── models/
+│   │   ├── User.js               <-- User schema with pre-save bcrypt hashing
+│   │   └── Request.js            <-- Request schema (6 states, files, audit timeline)
+│   └── routes/
+│       ├── auth.js               <-- Login, registration & institutional email validator
+│       └── requests.js           <-- Role-filtered CRUD & lifecycle actions
+└── client/
+    ├── package.json              <-- React 18, Vite, Tailwind CSS, Lucide icons
+    ├── vite.config.js            <-- Vite configuration with local /api proxy
+    ├── tailwind.config.js        <-- Custom Christ University color tokens
+    ├── index.html                <-- HTML5 entry with Inter font
+    └── src/
+        ├── App.jsx               <-- Main view routing & layout container
+        ├── main.jsx              <-- React DOM entry with Auth & Theme providers
+        ├── index.css             <-- Tailwind base, smooth gradients & overflow fixes
+        ├── context/
+        │   ├── AuthContext.jsx   <-- Auth state & 1-click persona quick switch
+        │   └── ThemeContext.jsx  <-- Dual theme persistence (localStorage)
+        ├── components/
+        │   ├── Navbar.jsx        <-- Responsive navbar with user avatar & badges
+        │   ├── Footer.jsx        <-- Helpline 080 0000 0000 & office hours
+        │   ├── StatusBadge.jsx   <-- Visual chips for all 6 workflow states
+        │   ├── CampusBadge.jsx   <-- Visual badges for 6 campuses
+        │   ├── EmailWarningBanner.jsx <-- Non-Christ institutional email alert
+        │   └── RequestTimeline.jsx    <-- Chronological audit history log
+        └── pages/
+            ├── HomePage.jsx             <-- Verbatim Information, 3 Roles, & Demo Sandbox
+            ├── LoginPage.jsx            <-- Secure login with demo quick-switch
+            ├── RegisterPage.jsx         <-- Self-registration with email check
+            ├── RequesterDashboard.jsx   <-- Applicant tracking & confirmation
+            ├── CoordinatorDashboard.jsx <-- Campus tabs, 2-day SLA & routing
+            ├── SpecialistDashboard.jsx  <-- WhatsApp-clean expert review desk
+            ├── NewRequestPage.jsx       <-- Submission with <10MB doc validation
+            └── RequestDetailPage.jsx    <-- Full file inspection, fixes & closure
+
+================================================================================
+6. MONGODB ATLAS DATABASE SCHEMAS & CONFIGURATION
+================================================================================
+Database Name: CAI_Request_Portal
+Cloud Provider: MongoDB Atlas (Replica Set Cluster)
+
+1. User Schema:
+   • name: String (required)
+   • email: String (required, unique, lowercase)
+   • password: String (stored as 60-character bcrypt salt hash)
+   • role: String (enum: ['requester', 'coordinator', 'specialist'])
+   • campus: String (Christ University Campus)
+   • department: String (Default: 'COMPUTER SCIENCE')
+   • designation: String
+   • timestamps: true
+
+2. Request Schema:
+   • trackingId: String (unique, e.g., 'CAI-2026-001')
+   • requesterId: ObjectId (ref: User)
+   • requesterName: String
+   • requesterEmail: String (masked for Specialist)
+   • campus: String (6 official campuses)
+   • department: String
+   • shortTitle: String
+   • category: String (Hardware, Software, Travel, Event, Research, Other)
+   • otherPeopleInvolved: String
+   • amount: Number
+   • shortDescription: String
+   • documents: [{ fileName, fileType, fileSize, uploadedAt, version }]
+   • status: enum ['Submitted', 'Changes Requested', 'Under Specialist Review',
+                   'Specialist Feedback Received', 'Decision Made', 'Completed']
+   • coordinatorRemarks: String
+   • coordinatorReviewedAt: Date
+   • specialistAssigned: ObjectId (ref: User)
+   • specialistAssignedName: String
+   • coordinatorNoteToSpecialist: String
+   • specialistReview: { recommendation, feedback, reviewedAt, specialistName }
+   • finalDecision: { outcome, decisionNotes, decidedAt, decidedByName }
+   • requesterConfirmed: Boolean
+   • requesterConfirmedAt: Date
+   • requesterConfirmationNote: String
+   • timeline: [{ action, byName, byRole, timestamp, notes, badgeColor }]
+   • timestamps: true
+
+================================================================================
+7. PASSWORDS & SECURITY: BCRYPT HASHING ARCHITECTURE
+================================================================================
+• Industry-standard bcryptjs hashing with dynamic salting (10 rounds).
+• Mongoose pre-save hook in User.js automatically hashes plain-text passwords 
+  prior to database persistence.
+• Idempotence guard: Prevents double-hashing if an encrypted hash is already present.
+• Database Seeding: Demo passwords ('password123') are pre-computed using 
+  bcrypt.hashSync('password123', 10) before insertion.
+• Authentication: user.comparePassword(candidatePassword) verifies hashes using 
+  bcrypt.compare, rejecting invalid passwords with 401 Unauthorized.
+• API Sanitization: Password fields are completely excluded from public API queries.
+
+================================================================================
+8. INSTITUTIONAL EMAIL VALIDATION & DOMAIN ISOLATION
+================================================================================
+Regex validation against official Christ University email formats:
+• Faculty Format: user@christuniversity.in -> Verified with Faculty Badge
+• Student Format: user@<course>.christuniversity.in -> Verified with Student Badge
+• External Domains (Gmail, Yahoo, etc.): Immediate amber alert banner:
+  "Warning: This email does not match official Christ University formats. 
+  Proceeding in testing mode."
+
+================================================================================
+9. USER INTERFACE & DUAL THEME (DARK / LIGHT) AESTHETICS
+================================================================================
+• Dual Theme: One-click light/dark toggle persisted in localStorage.
+• Light Theme: Soft bluish diagonal gradient (#b9daf9 -> #d4e8fd -> #e6f1fd -> #f2f7fe).
+• Dark Theme: Deep bluish slate palette (#020617 / #0d1e36).
+• Responsive Navbar: Sleek circular avatar initials, color-coded role chips, 
+  and zero horizontal page overflow.
+
+================================================================================
+10. DEMO EVALUATOR LOGIN CREDENTIALS & 1-CLICK ACCESS
+================================================================================
+All demo accounts use password: password123.
+1-click buttons are available on the Home Page under the Fast Evaluator Sandbox section.
+
+Role          | Name                 | Email                           | Campus         | 1-Click Button Label
+--------------+----------------------+---------------------------------+----------------+---------------------------------
+Requester 1   | Dr. Anita Sharma     | anita.sharma@christuniversity.in| Central Campus | Log in as Requester 1 (Faculty)
+Requester 2   | Priya Sundaram       | priya.s@mca.christuniversity.in | BGR Campus     | Log in as Requester 2 (Student)
+Coordinator   | Prof. Rajesh Nair    | coordinator@christuniversity.in | Central Office | Log in as Coordinator
+Specialist    | Dr. K. S. Ramanathan | specialist@christuniversity.in  | Advisory Panel | Log in as Specialist
+
+================================================================================
+11. COMPLETE VERCEL CLOUD DEPLOYMENT GUIDE
+================================================================================
+1. Push "CAI Request Portal" folder to GitHub (techaxadi01/CAI-Request-Portal).
+2. Ensure MongoDB Atlas Network Access allows connections from anywhere (0.0.0.0/0).
+3. Import GitHub repository into Vercel.
+4. Set Environment Variables:
+   • MONGO_URI = mongodb+srv://<username>:<password>@cluster0.dmuag96.mongodb.net/CAI_Request_Portal?retryWrites=true&w=majority
+   • JWT_SECRET = christ_university_cai_portal_jwt_secret_key_2026
+   • PORT = 5000
+5. Click Deploy. Vercel builds the React client and maps serverless API routes.

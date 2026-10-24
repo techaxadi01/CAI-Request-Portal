@@ -1,0 +1,2 @@
+MONGODB_USERNAME="rkadityaav1212mdb_db_user"
+MONGODB_PASSWORD="TechaxAdi2647203"
